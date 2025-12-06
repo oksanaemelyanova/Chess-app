@@ -8,7 +8,7 @@
 
 html, body {
     height: 100%;
-    background-color: rgb(169, 236, 169);
+    background-color: rgb(153, 240, 211);
 }
 
 body {
@@ -66,7 +66,8 @@ header .btn:hover {
 
 .header-nav .nav-link {
     text-decoration: none;
-    background-color: #ffdde1;
+    border: 1px solid violet;
+    background-color: #fdf3f4;
     color: #7b2d79;
     padding: 8px 12px;
     border-radius: 12px;
@@ -77,14 +78,14 @@ header .btn:hover {
 
 .header-nav .nav-link:hover {
     transform: scale(1.05);
-    background-color: #ffc9d6;
+    background-color: #81e4da;
 }
 
 
 /*quest container styling */
 
 #quest-container {    
-    border: 2px solid peachpuff;
+    border: 2px solid rgb(192, 171, 153);
     border-radius: 10px;
     display: flex;
     gap: 40px;
@@ -97,10 +98,10 @@ header .btn:hover {
 /* left side */
 #quest-left {
     flex: 1;
-    background-color: aliceblue;
+    background-color: rgb(255, 251, 240);
     padding: 30px;
     border-radius: 20px;
-    border: 3px solid #ffd1dc;
+    border: 3px solid #c4a8ae;
     box-shadow: 4px 4px 0 #dadada;
     font-family: "Comic Sans MS", "Fredoka", sans-serif;
 }
@@ -113,8 +114,8 @@ header .btn:hover {
 }
 
 .choice {
-    background: #ffdde1;
-    border: 2px solid #ffb3c6;
+    background: #f8eaec;
+    border: 2px solid #c88092;
     padding: 12px 20px;
     border-radius: 12px;
     cursor: pointer;
@@ -126,14 +127,14 @@ header .btn:hover {
 
 .choice:hover {
     transform: scale(1.05);
-    background: #ffc9d6;
+    background: #81e4da;;
 }
 
 
 /* right side */
 #quest-right {
     flex: 1;
-    background-color: rgb(174, 211, 244);
+    background-color: rgb(245, 230, 183);
     padding: 30px;
     border-radius: 20px;
     border: 3px solid #bcdcff;
@@ -144,7 +145,7 @@ header .btn:hover {
 
 #quest-right .placeholder {
     text-align: center;
-    color: #3f84c9;
+    color: #4e3764;
     font-size: 25px;
     margin-top: 40px;
     opacity: 0.7;
@@ -176,7 +177,7 @@ header .btn:hover {
 }
 
 .card:hover {
-    width: 350px;
+    
     border: 1px solid red;
     transition: 1s;
     transform: scale(1.05);
@@ -244,7 +245,7 @@ header .btn:hover {
 #diary-form .btn {
     width: 150px;
     align-self: center;
-    background-color: #ff99cc;
+    background-color: #56ddf5;
     color: white;
     border: none;
     border-radius: 10px;
@@ -256,17 +257,17 @@ header .btn:hover {
 
 #diary-form .btn:hover {
     transform: scale(1.05);
-    background-color: #ff80b3;
+    background-color: #6ae0f5;
 }
 
 /* footer */
 #footer {
-    background-color: #ffd1dc;
+    background-color: #d1fff8;
     color: #7b2d79;
     text-align: center;
     padding: 20px;
     font-family: 'Comic Sans MS', 'Fredoka', sans-serif;
-    border-top: 3px solid #ffb3c6;
+    border-top: 3px solid #b58bf4;
     box-shadow: 0 -4px 6px rgba(0,0,0,0.1);
     margin-top: 40px;
 }
@@ -275,4 +276,218 @@ header .btn:hover {
     font-size: 16px;
     margin: 0;
 }
+
+/*------------------------------*/
+/*                              */
+/*  Media queries               */
+/*                              */
+/*------------------------------*/
+
+/* ------- MOBILE HEADER (<= 768px) ------- */
+@media (max-width: 768px) {
+
+    header {        
+        flex-direction: column;        
+        text-align: center;
+        gap: 15px;
+        padding: 15px 20px;
+    }
+
+
+    header h1 {
+        font-size: 2rem;
+        display: flex;
+        flex-direction: column; /* icon above text */
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        gap: 5px;
+    }
+
+    #logo-icon {
+        font-size: 32px;
+        padding-right: 0;
+        margin: 0 auto;
+        display: block;
+        margin-bottom: 5px;
+    }
+
+    /* NAV turns into a column */
+    .header-nav {
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+        align-items: center;
+    }
+
+    .header-nav .nav-link {
+        font-size: 1.5rem;
+        width: 80%;
+        text-align: center;
+    }
+
+    /* Back button moves below nav */
+    header .btn {
+        margin: 0;
+        width: 80%;
+        text-align: center;
+        font-size: 1.5rem;
+    }
+
+    /*---Quest section ---*/
+     /* Whole quest wrapper becomes stacked */
+    #quest-container {
+        flex-direction: column;
+        padding: 20px;
+        gap: 20px;
+        width: 95%;
+    }
+
+    /* Left and right blocks look like big readable cards */
+    #quest-left,
+    #quest-right {
+        padding: 25px;
+        font-size: 18px; /* base text size */
+    }
+
+    #quest-left h2 {
+        font-size: 26px;
+        text-align: center;
+    }
+
+    #big-pawn {
+        font-size: 60px;
+        display: block;
+        margin: 10px auto;
+    }
+
+    #quest-left p,
+    #quest-right p {
+        font-size: 20px;
+        line-height: 1.5;
+    }
+
+    /* Choice buttons full width for comfortable tapping */
+    .choice {
+        width: 100%;
+        margin-right: 0;
+        font-size: 20px;
+        padding: 14px;
+    }
+
+    /* Right panel text bigger */
+    #quest-right {
+        font-size: 20px;
+    }
+
+    #quest-right .placeholder {
+        font-size: 20px;
+        margin-top: 20px;
+    }
+
+    /*----- cards with chess facts ---*/
+     /* Stack cards vertically */
+    #knowContainer {
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px;
+        margin: 20px 10px;
+    }
+
+    /* Make cards full width on mobile */
+    .card {
+        width: 100%;
+        max-width: 500px; /* still keeps them nice and readable */
+        margin: 10px auto;
+        padding: 25px;
+    }
+
+    /* Bigger text for readability */
+    .card h3 {
+        font-size: 28px;
+    }
+
+    .card p {
+        font-size: 22px;
+        line-height: 1.5;
+    }
+
+    #knowledge h2 {
+        font-size: 32px;
+        margin-bottom: 25px;
+    }
+
+    /* Keep the icon large and centered */
+    .card i {
+        font-size: 60px;
+        margin-bottom: 15px;
+    }
+
+     /* Disable hover zoom on mobile */
+    .card:hover {
+        transform: none;
+    }
+
+    /* ----------------------------
+     MOBILE — CHESS DIARY SECTION
+    -----------------------------*/
+
+    #chess-diary {
+        margin: 15px;
+        padding: 20px;
+        max-width: 100%;
+        border-radius: 12px;
+    }
+
+    #chess-diary h2 {
+        font-size: 32px;
+        margin-bottom: 20px;
+    }
+
+    /* form fields become larger & easier to tap */
+    #diary-form {
+        gap: 20px;
+    }
+
+    #diary-form label {
+        font-size: 20px;
+    }
+
+    #diary-form input,
+    #diary-form textarea {
+        font-size: 20px;
+        padding: 14px;
+        border-radius: 12px;
+    }
+
+    /* bigger writing area */
+    #diary-form textarea {
+        min-height: 150px;
+    }
+
+    /* button full width on mobile */
+    #diary-form .btn {
+        width: 100%;
+        max-width: 300px;
+        padding: 14px;
+        font-size: 22px;
+        border-radius: 12px;
+    }
+
+
+    /* ----------------------------
+          MOBILE — FOOTER
+    -----------------------------*/
+
+    #footer {
+        padding: 25px 10px;
+    }
+
+    #footer p {
+        font-size: 20px;
+        line-height: 1.4;
+    }
+
+}
+
 
