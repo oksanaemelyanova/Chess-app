@@ -80,7 +80,7 @@ document.addEventListener("DOMContentLoaded", () => {
         if (correctSquare) {
             correctSquare.addEventListener("click", () => {
                 correctSquare.style.backgrounColor = "limegreen";
-                correctSquare.style.color = "white";
+                correctSquare.style.color = "black";
                 alert("Correct! Well Done!");
                 correctSquare.innerHTML = `&#9817;`;
                 initPawn.innerHTML = "";
