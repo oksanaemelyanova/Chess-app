@@ -1,0 +1,278 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    background-color: rgb(169, 236, 169);
+}
+
+body {
+    font-family: 'Fredoka', sans-serif;  
+}
+
+/*header styling */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 30px;
+    background: linear-gradient(90deg, #ffe6e6, #e6f2ff);
+    font-family: "Comic Sans MS", "Fredoka", sans-serif;
+}
+
+#logo-icon {    
+    font-size: 40px;
+    color: #5f1729;
+    text-shadow: 2px 2px #ffd1dc;
+    padding-right: 10px;
+}
+
+header h1 {
+    flex: 1;
+    text-align: center;
+    font-size: 32px;
+    color: #302a2a;
+    margin: 0;
+    font-weight: 700;
+}
+
+header .btn {
+    margin-left: 30px;
+    background: #a3d8ff;
+    padding: 10px 18px;
+    border-radius: 12px;
+    text-decoration: none;
+    color: #004a7c;
+    font-size: 18px;
+    transition: transform 0.2s;
+    font-family: inherit;
+}
+
+header .btn:hover {
+    transform: scale(1.05);
+    background: #8fcfff;
+}
+
+/* Header nav styling */
+.header-nav {
+    display: flex;
+    gap: 20px;
+}
+
+.header-nav .nav-link {
+    text-decoration: none;
+    background-color: #ffdde1;
+    color: #7b2d79;
+    padding: 8px 12px;
+    border-radius: 12px;
+    font-size: 18px;
+    font-family: inherit;
+    transition: transform 0.2s, background 0.2s;
+}
+
+.header-nav .nav-link:hover {
+    transform: scale(1.05);
+    background-color: #ffc9d6;
+}
+
+
+/*quest container styling */
+
+#quest-container {    
+    border: 2px solid peachpuff;
+    border-radius: 10px;
+    display: flex;
+    gap: 40px;
+    padding: 40px;
+    max-width: 1200px;
+    margin: auto;
+    margin-top: 50px;
+}
+
+/* left side */
+#quest-left {
+    flex: 1;
+    background-color: aliceblue;
+    padding: 30px;
+    border-radius: 20px;
+    border: 3px solid #ffd1dc;
+    box-shadow: 4px 4px 0 #dadada;
+    font-family: "Comic Sans MS", "Fredoka", sans-serif;
+}
+
+#big-pawn {
+    margin: 7px;
+    font-size: 50px;
+    color: #5439d8;
+    text-shadow: 2px 2px #ffd1dc;
+}
+
+.choice {
+    background: #ffdde1;
+    border: 2px solid #ffb3c6;
+    padding: 12px 20px;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 18px;
+    margin-right: 10px;
+    margin-top: 20px;
+    transition: transform 0.2s, background 0.2s;
+}
+
+.choice:hover {
+    transform: scale(1.05);
+    background: #ffc9d6;
+}
+
+
+/* right side */
+#quest-right {
+    flex: 1;
+    background-color: rgb(174, 211, 244);
+    padding: 30px;
+    border-radius: 20px;
+    border: 3px solid #bcdcff;
+    box-shadow: 4px 4px 0 #a3d8ff;
+    font-family: "Comic Sans MS", "Fredoka", sans-serif;
+    font-size: 35px;
+}
+
+#quest-right .placeholder {
+    text-align: center;
+    color: #3f84c9;
+    font-size: 25px;
+    margin-top: 40px;
+    opacity: 0.7;
+}
+
+/* knowledge section with cards styling */
+#knowContainer {
+    background-color: rgb(244, 244, 234);
+    border-radius: 10px;
+    border: 2px solid rgb(249, 198, 154);
+    text-align: center;
+    margin: 20px;
+    padding-top: 20px;
+    display: flex;
+    gap: 50px;
+    justify-content: center;
+    /*justify-content: space-evenly; */
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.card {
+    width: 350px;
+    border: 1px solid red;
+    border-radius: 5px;
+    transition: 1s;
+    padding: 25px;
+    margin: 25px 0;
+}
+
+.card:hover {
+    width: 350px;
+    border: 1px solid red;
+    transition: 1s;
+    transform: scale(1.05);
+}
+
+.card i {
+    font-size: 50px;
+    color: #7b2d79;
+    margin-bottom: 10px;
+    
+    animation: breathe 2.5s ease-in-out infinite;
+}
+
+#knowledge h2 {
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 20px; /* optional, for spacing */
+    color: #7b2d79; /* optional, to match your theme */
+    font-family: 'Fredoka', sans-serif; /* optional */
+}
+
+/* diary styling */
+#chess-diary {
+    background-color: #fff3e6;
+    border: 2px solid #ffd1dc;
+    border-radius: 15px;
+    padding: 30px;
+    margin: 30px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: 'Comic Sans MS', 'Fredoka', sans-serif;
+}
+
+#chess-diary h2 {
+    text-align: center;
+    color: #7b2d79;
+    margin-bottom: 25px;
+}
+
+#diary-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#diary-form label {
+    font-weight: bold;
+    color: #5c315b;
+}
+
+#diary-form input,
+#diary-form textarea {
+    padding: 10px;
+    border-radius: 10px;
+    border: 2px solid #ffb3c6;
+    font-family: 'Fredoka', sans-serif;
+    font-size: 16px;
+}
+
+#diary-form textarea {
+    resize: vertical;
+}
+
+#diary-form .btn {
+    width: 150px;
+    align-self: center;
+    background-color: #ff99cc;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+#diary-form .btn:hover {
+    transform: scale(1.05);
+    background-color: #ff80b3;
+}
+
+/* footer */
+#footer {
+    background-color: #ffd1dc;
+    color: #7b2d79;
+    text-align: center;
+    padding: 20px;
+    font-family: 'Comic Sans MS', 'Fredoka', sans-serif;
+    border-top: 3px solid #ffb3c6;
+    box-shadow: 0 -4px 6px rgba(0,0,0,0.1);
+    margin-top: 40px;
+}
+
+#footer p {
+    font-size: 16px;
+    margin: 0;
+}
+

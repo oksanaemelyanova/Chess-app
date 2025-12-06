@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Chess Adventure</title>
+        <link rel="stylesheet" href="./style.css">
+    </head>
+
+    <body>
+        <header>            
+                <div class="logo">
+                    <img id="logo-img" src="./chess.jpg" alt="chess icon" />                                                           
+                </div>
+                <span id="logo-name">Chess Adventure</span> 
+                <nav class="navigation">
+                    <a href="#about" class="item">About us</a>
+                    <a href="#carousel" class="item">Carousel</a>
+                    <a href="#features" class="item">Features</a>                    
+                    <a href="#contact" class="item">Contact Us</a>
+                </nav>
+                
+                <!-- burger menu won't be visible on thw full screen -->
+                <!-- using font-awesome icons-->
+                <button id="burger" class="burger-btn">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+
+                <!-- Mobile dropdown menu only visible on mobile -->
+                <!--
+                <div id="mobile-menu" class="mobile-menu">
+                    <a href="#about">About us</a>
+                    <a href="#carousel">Carousel</a>
+                    <a href="#features">Features</a>
+                    <a href="#contact">Contact Us</a>
+                </div>
+                -->
+        </header>
+
+        <main>
+            <section id="about">
+                <h1>Chess Adventure</h1>
+                <p>Learn chess step by step with interactive lessons and stories</p>
+                <a href="./lesson1.html" class="btn">Start lesson</a>
+                <a href="./quest1.html" class="btn">Start quest</a>
+            </section>
+
+            <section class="carousel-section">
+                <div class="carousel-container" id="carousel">
+                    <!--slides will be injected with JS code, please see the script-->
+                </div>
+            </section>
+
+            <section id="features">
+                <!--Should be three cards here-->
+
+                <!--Card 1 Interactive lessons-->
+                <div class="featureCard">
+                    <!--icon-->
+                    <i class="fa-solid fa-graduation-cap"></i>
+                    <!--h2 some catchy header :)-->
+                    <h2>Learn by Doing</h2>
+                    <p class="cardtext">Practice-driven lessons where each move is interactive.</p>
+                </div>
+
+                <!--Card 1 Interactive lessons-->
+                <div class="featureCard">
+                    <!--icon-->
+                    <i class="fa-brands fa-space-awesome"></i>
+                    <!--h2 some catchy header :)-->
+                    <h2>Story-Based Quests</h2>
+                    <p class="cardtext">Chess turns into an adventure. Each lesson unlocks a cool quest-story</p>
+                </div>
+
+                <!--Card 1 Interactive lessons-->
+                <div class="featureCard">
+                    <!--icon-->
+                    <i class="fa-solid fa-puzzle-piece"></i>
+                    <!--h2 some catchy header :)-->
+                    <h2>Smart Mini-Exercises</h2>
+                    <p class="cardtext">One concept. One task. Instant feedback. Short, precise exercises help master 
+                        each move step-by-step.</p>
+                </div>
+            </section>           
+        </main>
+
+        <footer id="contact">
+            <div class="footer-content">
+                <p>© 2025 Chess Adventure — All rights reserved</p>
+                <button id="openFeedback" class="feedback-btn">Give us feedback</button>
+            </div>            
+        </footer>
+
+        <!-- Pop-up modal-->
+        <div id="feedbackModal" class="modal">
+            <div class="modal-content">
+                <span id="closeModal" class="close">&times;</span>
+
+                <h2>Your Feedback</h2>
+                <p>We love hearing from adventurers like you! ♟️✨</p>
+
+                <form id="feedbackForm">
+                    <label>Name:</label>
+                    <input type="text" required>
+
+                    <label>Your message:</label>
+                    <textarea rows="4" required></textarea>
+
+                    <button type="submit" class="submit-btn">Send</button>
+                </form>
+
+            </div>
+        </div>
+
+
+        <!-- Scripts section-->
+        <script src="https://kit.fontawesome.com/cec9fdf959.js" crossorigin="anonymous"></script>
+        <script src="./main.js"></script>
+    </body>
+</html>
