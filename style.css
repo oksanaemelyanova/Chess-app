@@ -1,0 +1,443 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    background-color: rgb(169, 236, 169);
+}
+
+body {
+    font-family: 'Fredoka', sans-serif;  
+}
+
+h1, h2 {
+    margin: 10px 0;
+    color: #7b2d79;
+    font-weight: 600;
+}
+
+p {
+    color: #5c315b;
+}
+
+/* Styling for header */
+
+header {   
+    background-color: #e5fad3;
+    color: rgb(129, 21, 21);
+    width: 100%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+#logo-box {
+    display: flex;
+    align-items: center;    
+    gap: 10px;
+    flex-shrink: 0;
+}
+
+#logo-img {
+    border-radius: 30px;
+    border: 5px solid rgb(99, 71, 47);
+    height: 60px;
+}
+
+#logo-name {
+    font-size: 25px;
+    font-weight: 700;
+    color: #7b2d79;    
+}
+
+nav.navigation {
+    
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    margin: 5px 10px;
+    padding: 3px 6px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: 1s;
+    text-decoration: none;
+    color: rgb(136, 7, 102);
+    font-size: 20px;
+    
+}
+
+nav a:hover {
+    margin: 5px 10px;
+    padding: 3px 6px;
+    text-decoration: none;
+    border-radius: 10px;
+    background-color: brown;
+    color: aliceblue;
+}
+
+/*main area */
+
+main {
+    padding-top: 60px;
+}
+
+/*for about area */
+
+#about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 60px;
+}
+
+#about h1 {
+    padding-left: 25px;
+}
+
+.btn {
+    margin-top: 10px;
+    display: inline-block;
+    padding: 10px 20px;
+    background: #25c51c;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: 1s;
+}
+
+.btn:hover {
+    text-decoration: none;
+    border-radius: 10px;
+    background-color: rgb(21, 118, 94);
+    color: aliceblue;
+    transition: 1s;
+    transform: scale(1.05);
+}
+
+/* styling for features area */
+
+#features {
+    background-color: rgb(244, 244, 234);
+    border-radius: 10px;
+    border: 2px solid rgb(249, 198, 154);
+    text-align: center;
+    margin: 20px;
+    padding-top: 20px;
+    display: flex;
+    gap: 50px;
+    justify-content: center;
+    /*justify-content: space-evenly; */
+    margin-top: 30px; 
+}
+
+.featureCard {
+    width: 350px;
+    border: 1px solid red;
+    border-radius: 5px;
+    transition: 1s;
+    padding: 25px;
+    margin: 25px 0;
+}
+
+.featureCard:hover {
+    width: 350px;
+    border: 1px solid red;
+    transition: 1s;
+    transform: scale(1.05);
+}
+
+.featureCard i {
+    font-size: 50px;
+    color: #7b2d79;
+    margin-bottom: 10px;
+    
+    animation: breathe 2.5s ease-in-out infinite;
+}
+
+@keyframes breathe {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.15); }
+    100% { transform: scale(1);}
+}
+
+/*styling for carousel */
+.carousel-section {
+    margin-top: 40px;
+    padding: 0 10px;
+}
+
+.carousel-container {
+    position: relative;
+    /* two width rules, up to 600px on large screens and just 100% on smaller */
+    max-width: 600px;
+    width: 100%;
+    height: 600px;
+    overflow: hidden;
+    margin: auto;
+}
+
+.carousel-slide {
+    display: none;
+    width: 100%;
+    height: 100%;    
+}
+
+.carousel-slide.active {
+    display: block;
+}
+
+.carousel-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0,0,0,0.5);
+    border: none;
+    color: white;
+    font-size: 30px;
+    padding: 10px 15px;
+    cursor: pointer;
+}
+
+.prev { left: 10px; }
+.next { right: 10px; }
+
+/* FOOTER */
+#contact {
+    margin-top: 50px;
+    background: linear-gradient(135deg, #ffe2ec, #e3f3ff);
+    padding: 40px;
+    text-align: center;
+    border-top: 3px solid #ffd1dc;
+    font-family: "Comic Sans MS", "Fredoka", sans-serif;
+}
+
+.footer-content p {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.feedback-btn {
+    background: #9bebd2;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 12px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: transform 0.2s;
+    font-family: inherit;
+}
+
+.feedback-btn:hover {
+    transform: scale(1.05);
+    background: #49e296;
+}
+
+/* --- MODAL --- */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 10;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.4);
+    animation: fadeIn 0.3s;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.modal-content {
+    background: #ffffff;
+    width: 90%;
+    max-width: 420px;
+    margin: 100px auto;
+    padding: 25px;
+    border-radius: 20px;
+    animation: pop 0.25s ease;
+    border: 4px solid #ffb6c8;
+    font-family: "Comic Sans MS", "Fredoka", sans-serif;
+}
+
+@keyframes pop {
+    from { transform: scale(0.8); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+/* Close button */
+.close {
+    float: right;
+    font-size: 28px;
+    cursor: pointer;
+    color: #ff6f91;
+}
+
+.close:hover {
+    transform: scale(1.15);
+}
+
+/* FORM STYLING */
+#feedbackForm {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+}
+
+#feedbackForm label {
+    margin-top: 10px;
+    font-size: 16px;
+}
+
+#feedbackForm input,
+#feedbackForm textarea {
+    padding: 10px;
+    border: 2px solid #ffd1dc;
+    border-radius: 12px;
+    font-size: 16px;
+    font-family: inherit;
+    background: #fff5f8;
+}
+
+.submit-btn {
+    background: #a3d8ff;
+    padding: 10px;
+    border: none;
+    border-radius: 12px;
+    margin-top: 15px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.submit-btn:hover {
+    transform: scale(1.05);
+    background: #8fcfff;
+}
+
+/* ---------------------- */
+/* BURGER MENU — MOBILE   */
+/* ---------------------- */
+
+.burger-btn {
+    display: none;   /* hidden on desktop */
+    background: none;
+    border: none;
+    font-size: 32px;
+    cursor: pointer;
+    margin-left: auto;
+    color: #7b2d79;
+}
+
+/* Mobile behavior */
+/* Mobile & tablet (up to 1024px) */
+
+/*---- Usage of same nav bar for mobile burger menu grop down ---*/
+@media (max-width: 1200px) {
+
+    nav.navigation {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        right: 0;
+        top: 70px;
+        background: white;
+        padding: 20px;
+        border-radius: 12px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        width: 100%;
+    text-align: center;
+    padding: 20px 0;
+    gap: 15px;
+    z-index: 1000;
+    }
+
+    nav.navigation.active {
+        display: flex;
+    }
+
+    .burger-btn {
+        display: block;
+    }
+}
+
+/* Styling for phone screens*/
+
+@media (max-width: 768px) {
+
+    /*--------------------------*/
+    /* About section styling    */ 
+    /*--------------------------*/ 
+    #about {
+        margin: 20px;
+        padding: 0 10px;
+    }
+
+    /* Make the main header text readable on phone screens */
+    #about h1 {
+        font-size: 2rem; /* Ensure the H1 is big enough but doesn't overflow */
+        padding-left: 0; /* Remove padding that might push text off screen */
+        text-align: center;
+    }
+
+    /* Make the paragraph text readable */
+    #about p {
+        font-size: 1rem;
+        text-align: center;
+        padding: 0 10px;
+    }
+
+    .btn {
+        width: 80%; /* Make buttons take up most of the width */
+        max-width: 250px; /* But don't let them get too wide on tablets */
+        font-size: 1rem;
+        padding: 12px 0; /* Increase vertical padding for easy tapping */
+        /* Since the parent is flex column, they naturally stack */
+        text-align: center;
+    }
+
+    /*--------------------------*/
+    /* Features section styling */ 
+    /*--------------------------*/   
+    #features {
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px;
+        margin: 10px;
+    }
+
+    .featureCard, .featureCard:hover {
+        width: 100%;        
+        margin: 10px 0;
+    }    
+
+    .featureCard h2 {
+        font-size: 1.2 rem;
+    }
+
+    /*---------------------------*/
+    /*     Carousel styling      */ 
+    /*---------------------------*/   
+    .carousel-container {
+        height: 450px;
+        padding: 0 5px;
+    }
+}

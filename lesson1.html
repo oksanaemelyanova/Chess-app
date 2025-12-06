@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Lesson 1 - Pawn Basics</title>
+        <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-TvP2i6CbnCyQ+MPla8NuI7pn+iAWQfOrty4NCzRr+gpraxImnTGiRZ0VE72HAn9bZyEJ+NwLjY1vq9vqQv4L8A=="
+      crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+        <link rel="stylesheet" href="./lesson_style.css">
+    </head>
+
+    <body>
+        <header>
+            <h1 id="begin">Lesson 1: Pawn Basics</h1>
+            <a href="./index.html" class="btn">Back to Home</a>
+        </header>
+
+        <main>
+            <section id="lesson">
+                <h2>Learn How a Pawn Moves</h2>
+                <div id="chessboard"></div>
+
+                <div class="lessonContols">
+                    <button id="animateBtn">Show Pawn Move</button>
+                    <button id="restart">Show again</button>
+                </div>              
+            </section>
+
+            <!--Exersice section-->
+            <section id="exSection">
+                <h2>Practice</h2>
+                <p>Move the highlighted pawn by clicking one of the highlighted squares</p>
+                <!--to add reset button-->
+                <div id="exercise-board"></div>
+            </section>
+
+            <!--text content section-->
+            <section id="pawn-facts">
+                <div class="cards-container">
+                    <div class="card">
+                        <!--add a card icon-->
+                        <h3>Pawn Promotion</h3>                    
+                        <p class="card-text">When a pawn reaches the opposite 
+                            end of the board, it can be promoted to a queen, rook, bishop, or knight.</p>                    
+                    </div>
+                    <div class="card">
+                        <h3>Pawn Structure</h3>
+                        <p class="card-text">Pawns create the backbone of a chess position. 
+                            Strong pawn structure often leads to a strong game.</p>                    
+                    </div>
+                    <div class="card">
+                        <h3>En Passant</h3>
+                        <p class="card-text">Pawns can capture en passant, 
+                            a special move occurring when an opposing pawn moves 
+                            two squares forward from its starting position.</p>
+                    </div>
+            </section>
+
+            <!-- Pick a task section-->
+             <section id="task-section">
+                <h2>Pick Your Pawn Buddy and Unlock Today’s Challenge!</h2>
+
+                <div id="task-container">
+
+                    <!-- flipped cards with pawn personalities and tasks -->
+                    <!-- Card 1-->
+                    <div class="task" id="task1">
+                        <div class="task-inner">
+                            
+                            <!-- Front side of the card -->
+                            <div class="task-front">
+                                <h4>The Warm & Woolly Pawn</h4>
+                                <img src="./task1.jpg" alt="pawn knitting stuff"/>
+                            </div>
+
+                            <!-- Back -->
+                            <div class="task-back">
+                                <p>Your task:
+                                    Move a pawn forward two squares to start the game!
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 2-->
+                    <div class="task" id="task2">
+                        <div class="task-inner">
+
+                            <div class="task-front">
+                                <h4>Bookworm Pawn</h4>
+                                <img src="./task2.jpg" alt="pawn reading the book"/>
+                            </div>
+
+                            <div class="task-back">
+                                <p>Your task:
+                                    Find a chess tactic in your favorite book or online and explain it in your own words.
+                                </p>
+                            </div>
+                        </div>                        
+                    </div>
+
+                    <!-- Card 3-->
+                    <div class="task" id="task3">
+                        <div class="task-inner">
+
+                            <div class="task-front">
+                                <h4>Chill Master Pawn</h4>
+                                <img src="./task3.jpg" alt="pawn with coffee on the coach">
+                            </div>
+
+                            <div class="task-back">
+                                <p>Your task:
+                                    Play a short 5-minute game and stay relaxed — no stress!  
+                                    After the game, write down one thing you did well.
+                                </p>
+                            </div>
+                        </div>                        
+                    </div>
+
+                    <!-- Card 4-->
+                    <div class="task" id="task4">
+                        <div class="task-inner">
+
+                            <div class="task-front">
+                                <h4>Adventure Hiker Pawn</h4>
+                                <img src="./task4.jpg" alt="in the nature pawn" />
+                            </div>
+
+                            <div class="task-back">
+                                <p>Your task:
+                                    Explore a new opening today!  
+                                    Play the first 5 moves of an opening you’ve never tried before.
+                                </p>
+                            </div>
+                        </div>                        
+                    </div>
+
+                    <!-- Card 5-->
+                    <div class="task" id="task5">
+                        <div class="task-inner">
+
+                            <div class="task-front">
+                                <h4>Speedy Skating Pawn</h4>
+                                <img src="./task5.jpg" alt="pawn on the skateboard" />
+                            </div>
+
+                            <div class="task-back">
+                                <p>Your task:
+                                    Solve 3 quick puzzles in under 3 minutes.  
+                                    Speed + accuracy = success!
+                                </p>
+                            </div>
+                        </div>                        
+                    </div>
+                </div>
+             </section>
+        </main>
+
+        <footer id="contact">
+            <div class="footer-content">
+                <p>© 2025 Chess Adventure — All rights reserved</p>
+                <button id="pageUp"><a href="#begin"> Up</a></button>
+            </div>            
+        </footer>
+
+        <script src="./script.js"></script>
+    </body>
+</html>
