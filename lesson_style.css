@@ -57,12 +57,14 @@ header {
 /*Chessboard styling */
 
 #chessboard, #exercise-board {
+    max-width: 600px;
     width: 600px;
     margin: 30px auto;
     border: 5px solid #aaa5bb;
     display: flex;
     /*this will make to dispaly rows horisontally*/
     flex-direction: column;
+    transition: width 0.3s ease;
 }
 
 .row {
@@ -78,6 +80,8 @@ header {
     font-size: 36px;
     cursor: pointer;
     border: 1px solid #aaa5bb;
+    /* transition added for smooth resizing */
+    transition: all 0.3s ease;
 }
 
 .row:nth-child(even) .square:nth-child(odd),
@@ -92,7 +96,7 @@ header {
 
 #lesson h2, #exSection h2 {
     margin-top: 20px;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
     text-align: center;
 }
 
@@ -165,9 +169,12 @@ header {
 /* styling for cards */
 .cards-container {
     display: flex;
-    gap: 50px;
-    justify-content: center;
+    gap: 20px;
+    justify-content: flex-start;
     flex-wrap: wrap;
+    padding: 0 10px;
+    margin: 0 auto;
+    max-width: 1000px;
     align-items: stretch;
 }
 
@@ -178,11 +185,13 @@ header {
     transition: 1s;
     padding: 25px;
     margin: 25px 0;
-    width: 250px;
+    width: calc(33.3% - 40px);
+    min-width: 250px;
     text-align: center;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
+    flex-grow: 1;
 }
 
 .card:hover {
@@ -378,7 +387,8 @@ html {
 
 @media (max-width: 768px) {
     body {
-        padding: 10px;
+        padding: 0;
+        box-sizing: border-box;
     }
 
     header {
@@ -401,5 +411,88 @@ html {
         text-align: center;
         padding: 12px 0;
         font-size: 1.5rem;
+    }
+
+    #lesson, #exSection {
+        padding: 15px;
+    }
+
+    #chessboard, #exercise-board {
+        width: 100%;
+        width: 90vw; /*almost whole screen width */
+        border: 1vw solid #aaa5bb;
+        margin: 0 auto;
+    }
+
+    .square {
+        width: 11.25vw;
+        height: 11.25vw;
+        font-size: 24px;
+        border: 0.1vw solid #aaa5bb;
+    }
+
+     /* Style the buttons and header for better mobile layout */
+    .lessonContols {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 20px;
+        align-items: center;
+    }
+
+    .lessonContols button {
+        font-family: 'Fredoka', sans-serif;
+        color: #fcfaf1 !important;
+        font-weight: 800 !important;
+        width: 50%;
+        padding: 12px;
+        font-size: 1.5rem;
+    }
+
+    #exSection p {
+        font-size: 1.1rem;
+        text-align: center;
+        margin: 10px 0 20px 0;
+        line-height: 1.4;
+    }
+
+    .cards-container {
+        /* On mobile, we want them to stack perfectly top-to-bottom.
+           Removing 'gap' on the container and using margin on the card 
+           itself gives better control when stacking in a single column. */
+        gap: 0; 
+        flex-direction: column; /* Forces vertical stacking */
+        padding: 0 20px; /* Add some padding around the container on mobile */
+    }
+
+    .card {
+        /* Full width of the parent container (minus padding from cards-container) */
+        width: 100%; 
+        min-width: unset; /* Remove the fixed min-width constraint on mobile */
+        margin: 15px 0; /* Add top/bottom margin between stacked cards */
+        
+        /* Optional: increase font size for better mobile readability */
+        font-size: 1.1rem; 
+    }
+    
+    .card h3 {
+        font-size: 1.3rem; /* Adjust header size too */
+    }
+
+    /*--- Task cards mobile styling ---*/
+    #task-container {
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px;
+        margin: 10px;
+    }
+
+    .task-front, .task-back {
+        width: 100%;        
+        margin: 10px 0;
+    }
+
+    #task-section h2 {
+        font-size: 1.2rem;
     }
 }
