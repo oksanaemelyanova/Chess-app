@@ -495,4 +495,24 @@ html {
     #task-section h2 {
         font-size: 1.2rem;
     }
+
+    /*-- Footer styling --*/
+     .footer-content {
+        flex-direction: column; /* Stacks items vertically */
+        gap: 15px; /* Adds space between the P tag and the Button */
+        padding: 0 15px; /* Ensures padding on small screens */
+    }
+
+    #contact p {
+        font-size: 0.9rem; /* Slightly reduced font size for mobile text, keeping it readable */
+        order: 2; /* Puts the copyright notice AFTER the button (optional) */
+    }
+
+    #pageUp {
+        width: 100%; /* Makes the button full width of the footer content */
+        max-width: 200px; /* Prevents button from getting too wide on tablets */
+        font-size: 1rem; /* Keeps button text readable */
+        order: 1; /* Puts the button BEFORE the copyright notice (optional) */
+        margin-top: 10px; /* Add slight margin if needed */
+    }
 }
