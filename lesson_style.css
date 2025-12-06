@@ -384,19 +384,20 @@ html {
     header {
         flex-direction: column;
         align-items: center;
-        gap: 15px;
-        padding: 15px;
+        gap: 20px;
+        padding: 20px 10px;
     }
 
     header h1 {
-        font-size: 2rem;
+        font-size: 2.5rem;
         text-align: center;
+        width: 100%;
         margin: 0; /* remove default margin to avoid overflow */
     }
 
     .btn {
         width: 100%;
-        max-width: 200px;
+        max-width: 300px;
         text-align: center;
         padding: 12px 0;
         font-size: 1.5rem;
